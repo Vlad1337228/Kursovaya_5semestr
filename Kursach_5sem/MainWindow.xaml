@@ -1,0 +1,34 @@
+﻿<Window x:Name="Состав_автомобиля" x:Class="Kursach_5sem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursach_5sem"
+        mc:Ignorable="d"
+        Title="Состав_автомобиля" Height="450" Width="800" ResizeMode="CanResize">
+    <Grid x:Name="dataGridInfo" Background="#FFD8D8D4">
+        <Button Content="Вывести данные" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click"/>
+        <ComboBox x:Name="ComboBoxAllTables" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="188" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>ДВИГАТЕЛЬ</TextBlock>
+            <TextBlock>КПП</TextBlock>
+            <TextBlock>ЦВЕТ</TextBlock>
+            <TextBlock>МОДЕЛЬ АВТОМОБИЛЯ</TextBlock>
+            <TextBlock>ЭЛЕМЕНТ КОМПЛЕКТАЦИИ</TextBlock>
+            <TextBlock>КОЛЕСО</TextBlock>
+            <TextBlock>МАРКА АВТОМОБИЛЯ</TextBlock>
+            <TextBlock>КУЗОВ</TextBlock>
+            <TextBlock>РЕГИСТРАЦИОННЫЕ ДАННЫЕ АВТОМОБИЛЯ</TextBlock>
+        </ComboBox>
+        <DataGrid x:Name="viewinfo" Margin="0,217,0,0" SelectionChanged="viewinfo_SelectionChanged"/>
+        <Label Content="Напишите vin номер автомобиля для удаления" HorizontalAlignment="Left" Margin="306,8,0,0" VerticalAlignment="Top" Width="280" Height="24"/>
+        <Button x:Name="butDelete" Content="Удалить" HorizontalAlignment="Left" Margin="306,63,0,0" VerticalAlignment="Top" Width="280" Click="Button_Click_1"/>
+        <TextBox x:Name="textBoxDelete" HorizontalAlignment="Left" Margin="306,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280"/>
+        <TextBox x:Name="textBoxNumberTypeEngine" HorizontalAlignment="Left" Margin="10,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193"/>
+        <TextBox x:Name="textBoxVolume" HorizontalAlignment="Left" Margin="208,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193"/>
+        <TextBox x:Name="textBoxHP" HorizontalAlignment="Left" Margin="406,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="406,182,0,0" VerticalAlignment="Top" Width="193" Click="Button_Click_2"/>
+        <Label Content="заводской номер типа двигателя" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top" Width="193"/>
+        <Label Content="объем двигателя" HorizontalAlignment="Left" Margin="208,133,0,0" VerticalAlignment="Top" Width="193"/>
+        <Label Content="лошадиные силы" HorizontalAlignment="Left" Margin="406,133,0,0" VerticalAlignment="Top" Width="193"/>
+    </Grid>
+</Window>
